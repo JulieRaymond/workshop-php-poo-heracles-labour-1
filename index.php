@@ -15,18 +15,12 @@
         // Tour de Héraclés:
         $héraclès->Fight($lionDeNemee);
 
-        // Vérification si Lion de Némée est encore en vie sinon affichage vainceur/perdant
-        if (!$lionDeNemee->isAlive()) {
-            echo $héraclès->getName() . " gagne le combat et " . $lionDeNemee->getName() . " perd." . PHP_EOL;
-            break;
-        }
-
         // Tour de Lion de Némée:
         $lionDeNemee->Fight($héraclès);
+    }
 
-        // Vérification si Héraclès est encore en vie sinon affichage vainceur/perdant
-        if (!$héraclès->isAlive()) {
-            echo $lionDeNemee->getName() . " gagne le combat et " . $héraclès->getName() . " perd." . PHP_EOL;
-            break;
-        }
+    if (!$héraclès->isAlive()) {
+        echo $lionDeNemee->getName() . " gagne le combat et " . $héraclès->getName() . " perd." . PHP_EOL;
+    } elseif (!$lionDeNemee->isAlive()) {
+        echo $héraclès->getName() . " gagne le combat et " . $lionDeNemee->getName() . " perd." . PHP_EOL;
     }
