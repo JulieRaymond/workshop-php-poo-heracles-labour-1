@@ -28,16 +28,16 @@ class Fighter
 
     public function Fight(Fighter $opponent)
     {
-        // Calcule les dégâts de l'attaquant (nombre aléatoire entre 1 et sa force)
+        // Dégâts de l'attaquant (nombre aléatoire entre 1 et sa force)
         $damage = rand(1, $this->strength);
 
-        // Calcule la défense de l'attaqué (soustrait la dextérité de l'attaqué aux dégâts)
+        // Défense de l'attaqué 
         $defense = $opponent->dexterity;
 
-        // Calcule les dégâts nets (dégâts de l'attaquant - défense de l'attaqué)
+        // Dégâts réels = dégâts de l'attaquant - défense de l'attaqué
         $netDamage = $damage - $defense;
 
-        // Vérifie que les dégâts nets ne sont pas négatifs
+        // Vérifie que les dégâts ne sont pas négatifs
         $netDamage = max($netDamage, 0);
 
         // Met à jour les points de vie de l'attaqué en soustrayant les dégâts nets
