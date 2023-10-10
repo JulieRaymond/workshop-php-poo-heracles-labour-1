@@ -4,12 +4,6 @@
     $héraclès = new Fighter("Héraclès 🧔", 20, 6);
     $lionDeNemee = new Fighter("Lion de Némée 🦁", 11, 13);
 
-    //afficher nom et points de vie:
-    // echo $héraclès->getName() . " a " . $héraclès->getLife() . " points de vie 💙" . PHP_EOL;
-    // echo $lionDeNemee->getName() . " a " . $lionDeNemee->getLife() . " points de vie 💙" . PHP_EOL;
-    //appeler une fois la fonction fight : 
-    //$héraclès->fight($lionDeNemee);
-
     //COMBAT A MORT BOUCLE :
     $round = 0;
 
